@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  header {
+    background-color: #8b0000;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .btn-menu {
+    display: none;
+    font-size: 28px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-principal {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-principal li {
+    position: relative;
+  }
+  
+  .item-menu {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background 0.3s;
+  }
+  
+  .item-menu:hover,
+  .item-menu.selecionado {
+    background-color: #b22222;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #a10000;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .submenu li a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .has-submenu:hover .submenu {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .btn-menu {
+      display: block;
+    }
+  
+    .menu-principal {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .menu-principal.aberto {
+      display: flex;
+    }
+  
+    .submenu {
+      position: static;
+    }
+  
+    .has-submenu .submenu {
+      display: none;
+      flex-direction: column;
+    }
+  
+    .has-submenu.aberto .submenu {
+      display: flex;
+    }
+  }
+  
+  /* Conteúdo */
+  .conteudo {
+    padding: 20px;
+  }
+  
+  .conteudo section {
+    margin-bottom: 30px;
+  }
+  
+  .conteudo h1, .conteudo h2, .conteudo h3 {
+    color: #8b0000;
+    margin-bottom: 10px;
+  }
+  
+  .conteudo p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Formulário de Contato */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  
+  form button {
+    padding: 10px;
+    background-color: #b22222;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #8b0000;
+  }
+  
+  /* Popup */
+  .popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  

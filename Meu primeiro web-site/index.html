@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abraham | Segurança Digital</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="menu">
+      <div class="logo">Abraham | Red Team</div>
+      <button class="btn-menu" id="btnMenu">&#9776;</button>
+      <ul class="menu-principal" id="menuPrincipal">
+        <li><a href="#" class="item-menu" onclick="location.reload()">Início</a></li>
+        <li class="has-submenu">
+          <a href="#servicos" class="item-menu">Serviços</a>
+          <ul class="submenu">
+            <li><a href="#servico1">Análise de Vulnerabilidades</a></li>
+            <li><a href="#servico2">Testes de Invasão (Pentest)</a></li>
+            <li><a href="#servico3">Consultoria em Segurança</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="#quem-sou" class="item-menu">Sobre</a>
+          <ul class="submenu">
+            <li><a href="#quem-sou">Quem Sou</a></li>
+            <li><a href="#missao">Missão</a></li>
+          </ul>
+        </li>
+        <li><a href="#contato" class="item-menu">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <section id="inicio">
+      <h1>Bem-vindo ao Universo da Segurança Digital</h1>
+      <p>Proteja seus sistemas, sites e aplicações com quem entende de verdade. Conheça soluções práticas de segurança ofensiva e defensiva para empresas e desenvolvedores.</p>
+    </section>
+
+    <section id="servicos">
+      <h2>Serviços</h2>
+      <article id="servico1">
+        <h3>Análise de Vulnerabilidades</h3>
+        <p>Identificação de pontos fracos em sistemas e aplicações com foco preventivo.</p>
+      </article>
+      <article id="servico2">
+        <h3>Testes de Invasão (Pentest)</h3>
+        <p>Simulações reais de ataques para validar a segurança da sua estrutura digital.</p>
+      </article>
+      <article id="servico3">
+        <h3>Consultoria em Segurança</h3>
+        <p>Acompanhamento técnico com estratégias personalizadas para proteger seus dados.</p>
+      </article>
+    </section>
+
+    <section id="quem-sou">
+      <h2>Quem Sou</h2>
+      <p>Sou Abraham, estudante de Engenharia de Software e técnico em informática com mais de 15 anos de experiência. Atuo fortemente na área de pentesting Red Team, combinando teoria e prática para oferecer soluções reais de segurança cibernética.</p>
+    </section>
+
+    <section id="missao">
+      <h2>Missão</h2>
+      <p>Utilizar meu conhecimento técnico, experiência prática e visão estratégica para ajudar pessoas e empresas a criarem sistemas mais seguros, responsivos e funcionais. Este projeto representa minha dedicação ao desenvolvimento front-end com foco em segurança e experiência do usuário.</p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form id="formContato" name="contato" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contato">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="popup" class="popup">Mensagem enviada com sucesso!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
